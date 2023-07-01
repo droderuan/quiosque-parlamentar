@@ -5,7 +5,7 @@
 migration_lock.toml
 
 # Removing the generated prisma client
-libs/models/*/src/lib
+libs/models/*/src/prisma/client
 
 # compiled output
 dist
