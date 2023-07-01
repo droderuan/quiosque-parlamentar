@@ -1,0 +1,319 @@
+_type: export
+__export_format: 4
+__export_date: 2023-07-01T19:31:30.960Z
+__export_source: insomnia.desktop.app:v2021.1.0
+resources:
+  - _id: req_75309a1df8294421b5b2525451a5ceba
+    parentId: fld_30864cf70b694127b113a6f2b8fc1b0f
+    modified: 1687388503092
+    created: 1687388348261
+    url: "{{ _.base_url }}/referencias/deputados/codSituacao"
+    name: "deputado: situações possíveis"
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: itens
+        value: "10000"
+        description: ""
+        id: pair_a03a038141d242bbb7be99db59955e82
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1669669192431.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_30864cf70b694127b113a6f2b8fc1b0f
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1687388489517
+    created: 1687388489517
+    name: referencia
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1687388489518
+    _type: request_group
+  - _id: wrk_9c773e69f4da45ba90ca423307c4be62
+    parentId: null
+    modified: 1669748678212
+    created: 1669748678212
+    name: Dados abertos
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_fc04668feac64729afd68c9d13f069d7
+    parentId: fld_30864cf70b694127b113a6f2b8fc1b0f
+    modified: 1687388522503
+    created: 1687388516116
+    url: "{{ _.base_url }}/referencias/deputados/tipoDespesa"
+    name: "despesa: tipos despesa"
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: itens
+        value: "10000"
+        description: ""
+        id: pair_a03a038141d242bbb7be99db59955e82
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1669658156546.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1f04ae5f40014d849fab127e41481e05
+    parentId: fld_12bf10a5bbc24c49aa7a01bee05a0163
+    modified: 1687308722621
+    created: 1687308717679
+    url: "{{ _.base_url }}/legislaturas"
+    name: listar legislaturas
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407765
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_12bf10a5bbc24c49aa7a01bee05a0163
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1687308707931
+    created: 1687308704195
+    name: legislaturas
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669824005497
+    _type: request_group
+  - _id: req_bdcf423c353449768f18bc158fda1809
+    parentId: fld_12bf10a5bbc24c49aa7a01bee05a0163
+    modified: 1687387271216
+    created: 1687387260731
+    url: "{{ _.base_url }}/legislaturas/56"
+    name: listar uma legislatura
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407758.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c609b7b0391343598ae487065b23a6fd
+    parentId: fld_ad2f8dc327cb44e18dced313e03f3284
+    modified: 1687308969260
+    created: 1687308883219
+    url: "{{ _.base_url }}/partidos"
+    name: listar partidos
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: itens
+        value: "1000"
+        description: ""
+        id: pair_caa0a886501c44efa254936a7d229e53
+      - name: idLegislatura
+        value: "56"
+        description: ""
+        id: pair_eba7b8e57e074fcd97147f0a087f0f28
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407765
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ad2f8dc327cb44e18dced313e03f3284
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1687308883216
+    created: 1687308883216
+    name: partidos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669824005472
+    _type: request_group
+  - _id: req_0e8495e2d0734a6c845712e22d64f950
+    parentId: fld_ad2f8dc327cb44e18dced313e03f3284
+    modified: 1687386937955
+    created: 1687386920627
+    url: "{{ _.base_url }}/partidos/36898"
+    name: listar um partido
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: itens
+        value: "1000"
+        description: ""
+        id: pair_caa0a886501c44efa254936a7d229e53
+        disabled: true
+      - name: idLegislatura
+        value: "56"
+        description: ""
+        id: pair_eba7b8e57e074fcd97147f0a087f0f28
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407752.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_16c9e7934db34651b26164ab03394f6e
+    parentId: fld_d3c139f916da4d81b54809965b416c80
+    modified: 1687305982432
+    created: 1669823694818
+    url: "{{ _.base_url }}/deputados"
+    name: listar deputados
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407790
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d3c139f916da4d81b54809965b416c80
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1669824005447
+    created: 1669824005447
+    name: deputados
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1669824005447
+    _type: request_group
+  - _id: req_bfdd017da7094df6b5a210936ef8ee83
+    parentId: fld_d3c139f916da4d81b54809965b416c80
+    modified: 1687305986020
+    created: 1669823965949
+    url: "{{ _.base_url }}/deputados/204528"
+    name: listar um deputado
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1669735407740
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a7491ba9d0494445b7ae4c69a13868e7
+    parentId: fld_d3c139f916da4d81b54809965b416c80
+    modified: 1687305989821
+    created: 1669824041462
+    url: "{{ _.base_url }}/deputados/204528/despesas"
+    name: listar despesas de um deputado
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: itens
+        value: "10000"
+        description: ""
+        id: pair_a03a038141d242bbb7be99db59955e82
+    headers: []
+    authentication: {}
+    metaSortKey: -1669691264201
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_9bbc0d68af924b5a9f9c18357d47c45c10176ba8
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1669823872760
+    created: 1669748678420
+    name: Base Environment
+    data:
+      base_url: https://dadosabertos.camara.leg.br/api/v2
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1669748678420
+    _type: environment
+  - _id: jar_9bbc0d68af924b5a9f9c18357d47c45c10176ba8
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1669829478274
+    created: 1669748678426
+    name: Default Jar
+    cookies:
+      - key: KUB
+        value: kub07|Y4eTa|Y4eS+
+        domain: dadosabertos.camara.leg.br
+        path: /
+        hostOnly: true
+        creation: 2022-11-30T15:55:01.567Z
+        lastAccessed: 2022-11-30T17:31:18.274Z
+        id: "0030173059888431997"
+      - key: KUB
+        value: kub09|Y4d9O|Y4d9O
+        domain: www.camara.leg.br
+        path: /
+        hostOnly: true
+        creation: 2022-11-30T15:56:38.062Z
+        lastAccessed: 2022-11-30T15:56:38.062Z
+        id: "874924015514013"
+    _type: cookie_jar
+  - _id: spc_6f3cc52a51764af4bdd19b0fd37bfbd4
+    parentId: wrk_9c773e69f4da45ba90ca423307c4be62
+    modified: 1669748678232
+    created: 1669748678232
+    fileName: Dados abertos
+    contents: ""
+    contentType: yaml
+    _type: api_spec
