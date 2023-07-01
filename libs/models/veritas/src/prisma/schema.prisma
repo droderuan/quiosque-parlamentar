@@ -12,13 +12,13 @@ datasource db {
 }
 
 model Partido {
-  id        Int      @id @unique @default(autoincrement())
-  idExterno Int      @unique
-  sigla     String   @unique @db.VarChar(8)
-  nome      String   @unique @db.VarChar(64)
-  uri       String   @unique @db.VarChar(256)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int       @id @unique @default(autoincrement())
+  idExterno Int       @unique
+  sigla     String    @unique @db.VarChar(8)
+  nome      String    @unique @db.VarChar(64)
+  uri       String    @unique @db.VarChar(256)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 
   deputado   Deputado? @relation(fields: [idDeputado], references: [id])
   idDeputado Int?
@@ -38,11 +38,11 @@ model Legislatura {
 }
 
 model RedeSocial {
-  id        Int      @id @unique @default(autoincrement())
-  url       String   @db.VarChar(128)
-  rede      String   @db.VarChar(64)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int       @id @unique @default(autoincrement())
+  url       String    @db.VarChar(128)
+  rede      String    @db.VarChar(64)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 
   deputado   Deputado @relation(fields: [idDeputado], references: [id])
   idDeputado Int
@@ -105,23 +105,23 @@ model Despesa {
 }
 
 model Fornecedor {
-  id        Int      @id @unique @default(autoincrement())
-  cpfCnpj   String   @unique @db.VarChar(128)
-  nome      String   @unique @db.VarChar(128)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int       @id @unique @default(autoincrement())
+  cpfCnpj   String    @unique @db.VarChar(128)
+  nome      String    @unique @db.VarChar(128)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 
   despesa Despesa[]
 }
 
 model TipoDespesa {
-  id        Int      @id @unique @default(autoincrement())
-  idExterno Int      @unique
-  tipo      String   @unique @db.VarChar(128)
-  descricao String   @unique @db.VarChar(128)
-  sigla     String   @unique @db.VarChar(8)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int       @id @unique @default(autoincrement())
+  idExterno Int       @unique
+  tipo      String    @unique @db.VarChar(128)
+  descricao String    @unique @db.VarChar(128)
+  sigla     String    @unique @db.VarChar(8)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime? @updatedAt
 
   Despesa Despesa[]
 }

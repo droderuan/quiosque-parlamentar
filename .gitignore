@@ -2,6 +2,7 @@
 
 .env
 *.bak
+migration_lock.toml
 
 # Removing the generated prisma client
 libs/models/*/src/lib

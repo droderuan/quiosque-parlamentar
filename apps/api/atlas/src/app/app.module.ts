@@ -1,11 +1,14 @@
 import { Module } from '@nestjs/common';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { VeritasModule } from '@quiosque-parlamentar/database-connection/veritas'
+
+import { AppController } from "./app.controller"
+import { AppService } from "./app.service"
+import { MirrorTasksModule } from '../mirrorTasks/mirrorTasks.module';
 
 @Module({
-  imports: [],
+  imports: [VeritasModule, MirrorTasksModule],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
