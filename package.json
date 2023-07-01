@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "veritas-update": "npx prisma db pull --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-generate": "npx prisma generate --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-migrate": "npx prisma migrate dev --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-apply-migrations": "npx prisma migrate dev --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-studio": "npx prisma studio --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma"
+    "veritas-update": "npx prisma db pull --schema=./libs/models/veritas/src/prisma/schema.prisma",
+    "veritas-generate": "npx prisma generate --schema=./libs/models/veritas/src/prisma/schema.prisma",
+    "veritas-migrate": "npx prisma migrate dev --create-only --schema=./libs/models/veritas/src/prisma/schema.prisma",
+    "veritas-apply-migrations": "npx prisma migrate dev --schema=./libs/models/veritas/src/prisma/schema.prisma",
+    "veritas-studio": "npx prisma studio --create-only --schema=./libs/models/veritas/src/prisma/schema.prisma"
   },
   "private": true,
   "devDependencies": {

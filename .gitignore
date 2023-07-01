@@ -3,6 +3,9 @@
 .env
 *.bak
 
+# Removing the generated prisma client
+libs/models/*/src/lib
+
 # compiled output
 dist
 tmp

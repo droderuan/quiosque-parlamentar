@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@quiosque-parlamentar/api/nest/database-connection": [
+        "libs/api/nest/database-connection/src/index.ts"
+      ],
       "@quiosque-parlamentar/models/veritas": [
         "libs/models/veritas/src/index.ts"
       ]

@@ -215,7 +215,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/ruan/projects/tcc/quiosque-parlamentar/libs/models/veritas/src/database/lib/prisma/client",
+      "value": "/home/ruan/projects/tcc/quiosque-parlamentar/libs/models/veritas/src/prisma/client",
       "fromEnvVar": null
     },
     "config": {
@@ -233,23 +233,24 @@ const config = {
   },
   "relativeEnvPaths": {
     "rootEnvPath": null,
-    "schemaEnvPath": "../../../../../../../../.env"
+    "schemaEnvPath": "../../../../../../.env"
   },
-  "relativePath": "../../../prisma",
+  "relativePath": "..",
   "clientVersion": "4.16.2",
   "engineVersion": "4bc8b6e1b66cb932731fb1bdbbc550d1e010de81",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "mysql",
-  "dataProxy": false
+  "dataProxy": false,
+  "postinstall": false
 }
 
 const fs = require('fs')
 
 config.dirname = __dirname
 if (!fs.existsSync(path.join(__dirname, 'schema.prisma'))) {
-  config.dirname = path.join(process.cwd(), "libs/models/veritas/src/database/lib/prisma/client")
+  config.dirname = path.join(process.cwd(), "libs/models/veritas/src/prisma/client")
   config.isBundled = true
 }
 
@@ -273,6 +274,6 @@ exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
 path.join(__dirname, "libquery_engine-debian-openssl-3.0.x.so.node");
-path.join(process.cwd(), "libs/models/veritas/src/database/lib/prisma/client/libquery_engine-debian-openssl-3.0.x.so.node")
+path.join(process.cwd(), "libs/models/veritas/src/prisma/client/libquery_engine-debian-openssl-3.0.x.so.node")
 path.join(__dirname, "schema.prisma");
-path.join(process.cwd(), "libs/models/veritas/src/database/lib/prisma/client/schema.prisma")
+path.join(process.cwd(), "libs/models/veritas/src/prisma/client/schema.prisma")
