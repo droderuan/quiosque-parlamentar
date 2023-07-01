@@ -6,7 +6,7 @@ CREATE TABLE `Partido` (
     `nome` VARCHAR(64) NOT NULL,
     `uri` VARCHAR(256) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
     `idDeputado` INTEGER NULL,
 
     UNIQUE INDEX `Partido_id_key`(`id`),
@@ -25,7 +25,7 @@ CREATE TABLE `Legislatura` (
     `dataFim` DATE NOT NULL,
     `uri` VARCHAR(256) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
     `idDeputado` INTEGER NULL,
 
     UNIQUE INDEX `Legislatura_id_key`(`id`),
@@ -42,7 +42,7 @@ CREATE TABLE `RedeSocial` (
     `url` VARCHAR(128) NOT NULL,
     `rede` VARCHAR(64) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
     `idDeputado` INTEGER NOT NULL,
 
     UNIQUE INDEX `RedeSocial_id_key`(`id`),
@@ -71,7 +71,7 @@ CREATE TABLE `Deputado` (
     `municipioNascimento` VARCHAR(128) NOT NULL,
     `escolaridade` VARCHAR(64) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `Deputado_id_key`(`id`),
     UNIQUE INDEX `Deputado_idExterno_key`(`idExterno`),
@@ -99,7 +99,7 @@ CREATE TABLE `Despesa` (
     `codLote` INTEGER NOT NULL,
     `parcela` INTEGER NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
     `idFornecedor` INTEGER NOT NULL,
     `idTipoDespesa` INTEGER NOT NULL,
     `idDeputadoId` INTEGER NULL,
@@ -114,7 +114,7 @@ CREATE TABLE `Fornecedor` (
     `cpfCnpj` VARCHAR(128) NOT NULL,
     `nome` VARCHAR(128) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `Fornecedor_id_key`(`id`),
     UNIQUE INDEX `Fornecedor_cpfCnpj_key`(`cpfCnpj`),
@@ -130,7 +130,7 @@ CREATE TABLE `TipoDespesa` (
     `descricao` VARCHAR(128) NOT NULL,
     `sigla` VARCHAR(8) NOT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
-    `updatedAt` DATETIME(3) NOT NULL,
+    `updatedAt` DATETIME(3) NULL ON UPDATE CURRENT_TIMESTAMP(3),
 
     UNIQUE INDEX `TipoDespesa_id_key`(`id`),
     UNIQUE INDEX `TipoDespesa_idExterno_key`(`idExterno`),
