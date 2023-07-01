@@ -5,8 +5,9 @@
   "scripts": {
     "veritas-update": "npx prisma db pull --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
     "veritas-generate": "npx prisma generate --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-migrate": "prisma migrate dev --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
-    "veritas-studio": "prisma studio --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma"
+    "veritas-migrate": "npx prisma migrate dev --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
+    "veritas-apply-migrations": "npx prisma migrate dev --schema=./libs/models/veritas/src/database/prisma/schema.prisma",
+    "veritas-studio": "npx prisma studio --create-only --schema=./libs/models/veritas/src/database/prisma/schema.prisma"
   },
   "private": true,
   "devDependencies": {
@@ -46,6 +47,7 @@
     "nx": "16.4.0",
     "nx-cloud": "latest",
     "prettier": "^2.6.2",
+    "prisma": "^4.16.2",
     "ts-jest": "^29.1.0",
     "ts-node": "10.9.1",
     "typescript": "~5.1.3"
@@ -54,6 +56,7 @@
     "@nestjs/common": "^10.0.2",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
+    "@prisma/client": "^4.16.2",
     "axios": "^1.0.0",
     "dotenv-expand": "^10.0.0",
     "next": "13.4.1",

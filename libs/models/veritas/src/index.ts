@@ -1,0 +1,1 @@
+export * from './database/lib/prisma/client';

@@ -1,5 +1,11 @@
 {
   "name": "@quiosque-parlamentar/models/veritas",
   "version": "0.0.1",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "prisma": "^4.16.2"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.16.2"
+  }
 }
