@@ -25,13 +25,13 @@ model Partido {
 }
 
 model Legislatura {
-  id         Int      @id @unique @default(autoincrement())
-  idExterno  Int      @unique
-  dataInicio DateTime @unique @db.Date
-  dataFim    DateTime @unique @db.Date
-  uri        String   @unique @db.VarChar(256)
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  id         Int       @id @unique @default(autoincrement())
+  idExterno  Int       @unique
+  dataInicio DateTime  @unique @db.Date
+  dataFim    DateTime  @unique @db.Date
+  uri        String    @unique @db.VarChar(256)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime? @updatedAt
 
   deputado   Deputado? @relation(fields: [idDeputado], references: [id])
   idDeputado Int?
@@ -49,27 +49,27 @@ model RedeSocial {
 }
 
 model Deputado {
-  id                  Int      @id @unique @default(autoincrement())
-  idExterno           Int      @unique
+  id                  Int       @id @unique @default(autoincrement())
+  idExterno           Int       @unique
   uri                 String
   nome                String
   nomeCivil           String
   nomeEleitoral       String
-  siglaUf             String   @db.VarChar(2)
-  urlFoto             String   @unique @db.VarChar(256)
-  email               String   @unique @db.VarChar(128)
-  situacao            String   @db.VarChar(128)
-  condicaoEleitoral   String   @db.VarChar(128)
-  cpf                 String   @unique @db.VarChar(11)
-  sexo                String   @db.VarChar(16)
-  urlWebSite          String   @db.VarChar(128)
-  dataNascimento      DateTime @db.Date
-  dataFalecimento     DateTime @db.Date
-  ufNascimento        String   @db.VarChar(2)
-  municipioNascimento String   @db.VarChar(128)
-  escolaridade        String   @db.VarChar(64)
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+  siglaUf             String    @db.VarChar(2)
+  urlFoto             String    @unique @db.VarChar(256)
+  email               String    @unique @db.VarChar(128)
+  situacao            String    @db.VarChar(128)
+  condicaoEleitoral   String    @db.VarChar(128)
+  cpf                 String    @unique @db.VarChar(11)
+  sexo                String    @db.VarChar(16)
+  urlWebSite          String    @db.VarChar(128)
+  dataNascimento      DateTime  @db.Date
+  dataFalecimento     DateTime  @db.Date
+  ufNascimento        String    @db.VarChar(2)
+  municipioNascimento String    @db.VarChar(128)
+  escolaridade        String    @db.VarChar(64)
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime? @updatedAt
 
   redeSocial  RedeSocial[]
   partido     Partido[]
@@ -78,23 +78,23 @@ model Deputado {
 }
 
 model Despesa {
-  id               Int      @id @unique @default(autoincrement())
+  id               Int       @id @unique @default(autoincrement())
   ano              Int
   mes              Int
-  codDocumento     String   @db.VarChar(128)
-  tipoDocumento    String   @db.VarChar(128)
+  codDocumento     String    @db.VarChar(128)
+  tipoDocumento    String    @db.VarChar(128)
   codTipoDocumento Int
-  dataDocumento    DateTime @db.Date
-  numDocumento     String   @db.VarChar(64)
-  valorDocumento   Decimal  @db.Decimal(16, 2)
-  urlDocumento     String   @db.VarChar(256)
-  valorLiquido     Decimal  @db.Decimal(16, 2)
-  valorGlosa       Decimal  @db.Decimal(16, 2)
-  numRessarcimento String   @db.VarChar(128)
+  dataDocumento    DateTime  @db.Date
+  numDocumento     String    @db.VarChar(64)
+  valorDocumento   Decimal   @db.Decimal(16, 2)
+  urlDocumento     String    @db.VarChar(256)
+  valorLiquido     Decimal   @db.Decimal(16, 2)
+  valorGlosa       Decimal   @db.Decimal(16, 2)
+  numRessarcimento String    @db.VarChar(128)
   codLote          Int
   parcela          Int
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime? @updatedAt
 
   fornecedor    Fornecedor  @relation(fields: [idFornecedor], references: [id])
   idFornecedor  Int
